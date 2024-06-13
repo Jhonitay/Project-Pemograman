@@ -5,6 +5,7 @@ import { useOutletContext } from 'react-router-dom'
 
 export default function PackageHistory() {
   const [histories, setHistories] = useState([])
+  // eslint-disable-next-line no-unused-vars
   const [errorMessage, setErrorMessage] = useState('')
 
   const { user } = useOutletContext()

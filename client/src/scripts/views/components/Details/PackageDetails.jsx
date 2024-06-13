@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { NavLink, useOutletContext, useParams } from 'react-router-dom'
+import { useOutletContext, useParams } from 'react-router-dom'
 import { BASE_IMAGEURL, getProfilePackageDetail } from '../../../data/api'
 import DestinationDetails from '../../components/Details/DestinationDetails'
 import Button from '../../components/Buttons/Button'
