@@ -5,7 +5,7 @@ const DetailOrder = () => {
     <>
       {/* breadcrumb */}
       <nav className="flex" aria-label="Breadcrumb">
-        <ol className="inline-flex items-center space-x-1 rtl:space-x-reverse md:space-x-2">
+        <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li className="inline-flex items-center">
             <a
               href="#"
@@ -43,7 +43,7 @@ const DetailOrder = () => {
               <NavLink to="/dashboard/orders">
                 <a
                   href="#"
-                  className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white md:ms-2"
+                  className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
                 >
                   Dashboard
                 </a>
@@ -67,7 +67,7 @@ const DetailOrder = () => {
                   d="m1 9 4-4-4-4"
                 />
               </svg>
-              <span className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2">
+              <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">
                 Detail Order
               </span>
             </div>
