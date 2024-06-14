@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Labels from '../Labels/Lables'
 import { NavLink } from 'react-router-dom'
-import { BASE_IMAGEURL } from '../../../data/api'
+// import { BASE_IMAGEURL } from '../../../data/api'
 import defaultUser from '../../../../assets/default-user.svg'
 
 const Card = ({ packagesData, tourguideData, cardId }) => {
@@ -20,7 +20,7 @@ const Card = ({ packagesData, tourguideData, cardId }) => {
       <NavLink to={`/packages/${cardId}`} className="flex flex-col gap-3">
         <figure className="h-64 w-full overflow-hidden rounded-lg">
           <img
-            src={BASE_IMAGEURL + packagesData.thumbnailUrl}
+            src={packagesData.thumbnailUrl}
             alt="Thumbnail Card"
             className="h-full w-full object-cover"
           />
@@ -29,7 +29,7 @@ const Card = ({ packagesData, tourguideData, cardId }) => {
           <img
             src={
               tourguideData.avatarUrl
-                ? `${BASE_IMAGEURL + tourguideData.avatarUrl}`
+                ? `${tourguideData.avatarUrl}`
                 : defaultUser
             }
             width="32px"

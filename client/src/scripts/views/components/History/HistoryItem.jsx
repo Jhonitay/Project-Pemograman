@@ -11,7 +11,7 @@ const HistoryItem = ({
   packageData,
   historyId,
 }) => {
-  console.log(BASE_IMAGEURL + tourGuideData.avatarUrl)
+  console.log(tourGuideData.avatarUrl)
   return (
     <section className="text-primary-950">
       <div className="flex flex-col gap-6 rounded-xl bg-white p-8 lg:flex-row">
@@ -23,9 +23,7 @@ const HistoryItem = ({
             <div className="flex w-8 items-center gap-2 overflow-hidden rounded-full">
               <img
                 src={
-                  tourGuideData.avatarUrl
-                    ? BASE_IMAGEURL + tourGuideData.avatarUrl
-                    : UserImg
+                  tourGuideData.avatarUrl ? tourGuideData.avatarUrl : UserImg
                 }
                 alt="tourguide avatar"
                 className="avatar"

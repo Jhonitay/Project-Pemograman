@@ -83,9 +83,7 @@ const Profile = () => {
           <img
             className="h-full w-full scale-125 object-cover"
             src={
-              profileData.avatarUrl
-                ? `${BASE_IMAGEURL + profileData.avatarUrl}`
-                : defaultUser
+              profileData.avatarUrl ? `${profileData.avatarUrl}` : defaultUser
             }
             alt="default user image"
           />
@@ -161,9 +159,7 @@ const Profile = () => {
             name={'avatar'}
             onChange={handleImageChange}
             placeholderImage={
-              profileData.avatarUrl
-                ? `${BASE_IMAGEURL + profileData.avatarUrl}`
-                : defaultUser
+              profileData.avatarUrl ? `${profileData.avatarUrl}` : defaultUser
             }
             placeholderWords={'Upload Foto'}
             isDisabled={isDisabled}

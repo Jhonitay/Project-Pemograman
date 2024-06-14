@@ -14,9 +14,7 @@ const Profile = ({ user }) => {
   }
   const [isOpen, setIsOpen] = useState(false)
   // eslint-disable-next-line no-unused-vars
-  const avatarUrl = user?.avatarUrl
-    ? `${BASE_IMAGEURL + user?.avatarUrl}`
-    : defaultUser
+  const avatarUrl = user?.avatarUrl ? `${user?.avatarUrl}` : defaultUser
   const fullName = `${user?.firstName || ''} ${user?.lastName || ''}`
 
   return (

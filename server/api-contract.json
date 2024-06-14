@@ -5,11 +5,17 @@
     "version": "1.0",
     "description": "Spesifikasi API untuk aplikasi travel Travsy"
   },
-  "servers": [{ "url": "http://172.188.98.99:3000/" }],
+  "servers": [
+    {
+      "url": "http://localhost:3000/api"
+    }
+  ],
   "paths": {
     "/register": {
       "post": {
-        "tags": ["Authentication"],
+        "tags": [
+          "Authentication"
+        ],
         "summary": "Mendaftarkan user baru",
         "requestBody": {
           "content": {
@@ -50,7 +56,11 @@
                     }
                   }
                 },
-                "required": ["username", "email", "password"]
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ]
               }
             }
           }
@@ -87,7 +97,9 @@
     },
     "/login": {
       "post": {
-        "tags": ["Authentication"],
+        "tags": [
+          "Authentication"
+        ],
         "summary": "User login",
         "requestBody": {
           "content": {
@@ -108,7 +120,10 @@
                     "example": "$Pander#800@"
                   }
                 },
-                "required": ["email", "password"]
+                "required": [
+                  "email",
+                  "password"
+                ]
               }
             }
           }
@@ -154,7 +169,9 @@
     },
     "/revalidate": {
       "get": {
-        "tags": ["Authentication"],
+        "tags": [
+          "Authentication"
+        ],
         "summary": "Revalidate user",
         "security": [
           {
@@ -202,7 +219,9 @@
     },
     "/profile": {
       "get": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Mendapatkan detail user berdasarkan username",
         "security": [
           {
@@ -248,7 +267,9 @@
         }
       },
       "put": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Merubah data user",
         "security": [
           {
@@ -305,7 +326,9 @@
     },
     "/profile/histories": {
       "get": {
-        "tags": ["Transaction"],
+        "tags": [
+          "Transaction"
+        ],
         "summary": "Mendapatkan riwayat transaksi user",
         "security": [
           {
@@ -361,7 +384,9 @@
     },
     "/profile/histories/{id}": {
       "get": {
-        "tags": ["Transaction"],
+        "tags": [
+          "Transaction"
+        ],
         "summary": "Mendapatkan detail riwayat transaksi user",
         "security": [
           {
@@ -429,7 +454,9 @@
     },
     "/profile/packages": {
       "get": {
-        "tags": ["Package"],
+        "tags": [
+          "Package"
+        ],
         "summary": "Mendapatkan paket wisata dari user",
         "security": [
           {
@@ -493,7 +520,9 @@
         }
       },
       "post": {
-        "tags": ["Package"],
+        "tags": [
+          "Package"
+        ],
         "summary": "Membuat paket wisata baru untuk user",
         "security": [
           {
@@ -527,7 +556,9 @@
     },
     "/profile/packages/{id}": {
       "get": {
-        "tags": ["Package"],
+        "tags": [
+          "Package"
+        ],
         "summary": "Mendapatkan detail paket wisata dari user",
         "security": [
           {
@@ -585,7 +616,9 @@
         }
       },
       "put": {
-        "tags": ["Package"],
+        "tags": [
+          "Package"
+        ],
         "summary": "Merubah data paket wisata dari user",
         "security": [
           {
@@ -652,7 +685,9 @@
         }
       },
       "delete": {
-        "tags": ["Package"],
+        "tags": [
+          "Package"
+        ],
         "summary": "Menghapus paket wisata dari user",
         "security": [
           {
@@ -709,7 +744,9 @@
     },
     "/profile/orders": {
       "get": {
-        "tags": ["Transaction"],
+        "tags": [
+          "Transaction"
+        ],
         "summary": "Mendapatkan daftar pemesanan yang didapatkan user",
         "security": [
           {
@@ -765,7 +802,9 @@
     },
     "/profile/orders/{id}": {
       "get": {
-        "tags": ["Transaction"],
+        "tags": [
+          "Transaction"
+        ],
         "summary": "Mendapatkan detail pemesanan yang didapatkan user",
         "security": [
           {
@@ -831,7 +870,9 @@
         }
       },
       "patch": {
-        "tags": ["Transaction"],
+        "tags": [
+          "Transaction"
+        ],
         "summary": "Mengubah status pemesanan yang didapatkan user",
         "security": [
           {
@@ -862,7 +903,9 @@
                     "example": "terkonfirmasi"
                   }
                 },
-                "required": ["status"]
+                "required": [
+                  "status"
+                ]
               }
             }
           }
@@ -916,7 +959,9 @@
     },
     "/packages": {
       "get": {
-        "tags": ["Package"],
+        "tags": [
+          "Package"
+        ],
         "summary": "Mendapatkan daftar paket wisata",
         "parameters": [
           {
@@ -1031,7 +1076,9 @@
     },
     "/packages/popular": {
       "get": {
-        "tags": ["Package"],
+        "tags": [
+          "Package"
+        ],
         "summary": "Mendapatkan daftar paket wisata populer",
         "responses": {
           "200": {
@@ -1076,7 +1123,9 @@
     },
     "/packages/{id}": {
       "get": {
-        "tags": ["Package"],
+        "tags": [
+          "Package"
+        ],
         "summary": "Mendapatkan detail paket wisata berdasarkan id",
         "parameters": [
           {
@@ -1133,7 +1182,9 @@
     },
     "/packages/{id}/pay": {
       "post": {
-        "tags": ["Transaction"],
+        "tags": [
+          "Transaction"
+        ],
         "summary": "Membeli paket wisata",
         "security": [
           {
@@ -1239,7 +1290,9 @@
     },
     "/provinces": {
       "get": {
-        "tags": ["Location"],
+        "tags": [
+          "Location"
+        ],
         "summary": "Mendapatkan daftar provinsi",
         "responses": {
           "200": {
@@ -1264,7 +1317,9 @@
     },
     "/provinces/{province}/cities": {
       "get": {
-        "tags": ["Location"],
+        "tags": [
+          "Location"
+        ],
         "summary": "Mendapatkan daftar kota di provinsi",
         "parameters": [
           {

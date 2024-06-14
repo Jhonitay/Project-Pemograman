@@ -42,7 +42,7 @@ const PackagesDetail = () => {
       >
         <div className="h-full w-full overflow-hidden rounded-lg md:rounded-l-lg lg:w-5/12">
           <img
-            src={BASE_IMAGEURL + packageDetail.thumbnailUrl}
+            src={packageDetail.thumbnailUrl}
             alt="Thumbnail Card"
             className=" h-full w-full object-cover "
           />
